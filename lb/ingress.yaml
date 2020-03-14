@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: name-virtual-host-ingress
+spec:
+  rules:
+  - host: dylanjwolff.com
+    http:
+      paths:
+      - backend:
+          serviceName: personal-site
+          servicePort: 80
+  - host: www.dylanjwolff.com
+    http:
+      paths:
+      - backend:
+          serviceName: personal-site
+          servicePort: 80
+  - http:
+      paths:
+      - backend:
+          serviceName: whoami
+          servicePort: 80
