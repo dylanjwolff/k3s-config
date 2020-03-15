@@ -23,3 +23,8 @@ spec:
       - backend:
           serviceName: whoami
           servicePort: 80
+  tls:
+  - hosts:
+    - dylanjwolff.com
+    - www.dylanjwolff.com
+    secretName: personal-site-prod-tls
