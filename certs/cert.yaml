@@ -1,0 +1,16 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: personal-site-tls
+  namespace: default
+spec:
+  # Secret names are always required.
+  secretName: personal-site-tls
+
+  dnsNames:
+  - dylanjwolff.com
+  - www.dylanjwolff.com
+
+  # Issuer references are always required.
+  issuerRef:
+    name: letsencrypt-staging
