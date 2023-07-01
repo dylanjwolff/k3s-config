@@ -1,1 +1,6 @@
-Configuration and deployments for my arm64 k3s cluster
+# Deploy!
+
+## Dashboard
+Created an admin-user... see official documentation
+
+
